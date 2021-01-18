@@ -129,9 +129,7 @@ function! lens#run() abort
   \)
 
   if g:lens#animate && exists('g:animate#loaded') && g:animate#loaded
-    if ! animate#window_is_animating(winnr())
-      call animate#window_absolute(width, height)
-    endif
+    call animate#window_absolute(width, height)
   else
     execute 'vertical resize ' . width
     execute 'resize ' . height
