@@ -174,6 +174,7 @@ augroup lens
   let g:lens#enter_disabled = 0
   autocmd! WinNew * let g:lens#enter_disabled = 1
   autocmd! WinEnter * call lens#win_enter()
+  autocmd! FocusGained * call lens#win_enter()
   autocmd! WinNew * let g:lens#enter_disabled = 0
 augroup END
 
